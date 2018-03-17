@@ -11,7 +11,7 @@ export async function addTodo(todo: Todo): Promise<void> {
 
 export async function updateTodo(todo: Partial<Todo>) {
   const db: any = await scuttlekit.openDb();
-  await db.update(todo);
+  await db.update("todos", todo);
 }
 
 export async function getTodos(list: string) {
