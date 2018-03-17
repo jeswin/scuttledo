@@ -3,6 +3,7 @@ export interface List {
 }
 
 export interface Todo {
+  id: string,
   list: string;
   text: string;
 }
