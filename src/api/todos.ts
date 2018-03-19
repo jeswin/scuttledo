@@ -1,9 +1,8 @@
 import { Todo } from "../types";
-
-const scuttlekit: any = 1;
+import { sdk } from "./scuttlekit";
 
 export async function addTodo(todo: Todo): Promise<void> {
-  const db: any = await scuttlekit.openDb();
+  const db = sdk().get("sqlite");
   await db.insert("todos", {
     todo
   });
