@@ -2,7 +2,7 @@ import { Todo } from "../types";
 import { sdk } from "./scuttlekit";
 
 export async function addTodo(todo: Todo): Promise<void> {
-  const db = sdk().get("sqlite");
+  const db = sdk().getService("sqlite");
   await db.insert("todos", {
     todo
   });
