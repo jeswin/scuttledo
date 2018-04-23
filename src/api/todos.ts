@@ -1,6 +1,16 @@
 import { Todo } from "../types";
 import { sdk } from "./scuttlekit";
 
+export async function createList(list: any): Promise<void> {
+  const db = sdk().getService("sqlite");
+  const key = createKey(["alice", "bob", "carol"]);
+  db.insert("permission", "edit-", )
+  db.insert(list, )
+  scuttlekit.publishWithKey(list);
+
+  db.insert("list", list);
+}
+
 export async function addTodo(todo: Todo): Promise<void> {
   const db = sdk().getService("sqlite");
   await db.insert("todos", {
