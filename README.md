@@ -16,6 +16,10 @@ UI Stack
 Underneath
 - Secure Scuttlebutt over WebSocket (ssb-ws)
 
+## API
+
+scuttlekit.crypto.createKey()
+
 ## Coming soon
 
 ... more ...
